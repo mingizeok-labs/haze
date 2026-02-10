@@ -16,4 +16,9 @@ window.SERVICES = {
             type: "render",
             wait: 30000
         },
+        NBB_F: {
+            url: "https://nbb.mingizeok.com",
+            type: "render",
+            wait: 30000
+        },
 };
