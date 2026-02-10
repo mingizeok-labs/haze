@@ -7,7 +7,7 @@ window.ENV = {
 
 window.SERVICES = {
         NBB: {
-            url: "https://backend.nbb.mingizeok.com",
+            url: "https://backend.nbb.mingizeok.com/docs",
             type: "render",
             wait: 30000
         },
