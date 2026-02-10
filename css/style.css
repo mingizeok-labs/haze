@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'TheFirefighterSPrayer';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_04@1.0/Firefighter_prayer.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SamlipCreamyWhite';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/TTSamlipCreamyWhiteR.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'TheFirefighterSPrayer';
+  font-size: 20px;
+  background: #f6f6f4;
+  color: #2b2b2b;
+}
+
+/* 종이 질감 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.header {
+  margin: 0;
+  font-family: 'SamlipCreamyWhite';
+  font-size: 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 16px;
+}
+
+.category {
+  margin-bottom: 32px;
+}
+
+.category_t {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category h1 {
+  font-size: 50px;
+}
+
+.category h2 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); 
+  gap: 30px;            /* 아이콘 사이의 간격 */
+  justify-items: center; /* 그리드 칸 '내부'에서 요소를 중앙으로 배치 */
+  padding: 20px;
+}
+
+.icon-link {
+  display: inline-flex;    /* 내부 요소를 유연하게 배치 */
+  flex-direction: column;  /* 위아래(세로) 방향으로 나열 */
+  align-items: center;     /* 가로축의 정중앙에 정렬 (핵심!) */
+  text-decoration: none;   /* 밑줄 제거 */
+  width: fit-content;      /* 컨텐츠 크기에 딱 맞춤 */
+  color: #2b2b2b;
+}
+
+.icon-link img {
+  display: block;          /* 이미지 하단의 미세한 간격 제거 */
+  margin-bottom: 8px;      /* 아이콘과 텍스트 사이 간격 */
+}
+
+.link-t {
+  margin: 0;               /* p 태그의 기본 상하 여백 제거 */
+  padding: 0;
+  text-align: center;      /* 두 줄 이상의 텍스트일 때 텍스트 자체를 중앙 정렬 */
+  font-size: 20px;
+  line-height: 1.4;        /* 줄 간격 조절로 가독성 향상 */
+}
+
+/* 화면 너비가 600px 이상일 때 (태블릿/PC) */
+@media (min-width: 600px) {
+  .icon-grid {
+    /* 아이콘이 4개뿐이라면 딱 4열로 고정 */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px; /* 넓은 화면에선 간격을 더 띄워도 예뻐요 */
+  }
+}
+
+footer {
+  font-family: 'SamlipCreamyWhite';
+  font-size: 15px;
+}

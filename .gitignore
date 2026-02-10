@@ -1,0 +1,11 @@
+# OS 관련 임시 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 관련 설정
+.vscode/
+.idea/
+
+# 로그 및 캐시
+*.log
+.eslintcache
